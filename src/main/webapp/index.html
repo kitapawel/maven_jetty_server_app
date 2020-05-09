@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css" integrity="sha384-nr8Zg0FGuy2mHjSDEtlFTk1UAYPogC1fcXsXwpshTY+BexlZFHQ99ruU/jL77qd7" crossorigin="anonymous">
+</head>
+<body>
+
+<form id="welcome" class="pure-form" style="width: 40%; margin: 0 auto">
+
+    <input type="text" name="name" class="pure-input-rounded" placeholder="name"/>
+    <label class="pure-radio">
+        <input type="radio"name="lang" value="1" checked="" />
+        😀
+    </label>
+    <label class="pure-radio">
+        <input type="radio" name="lang" value="2" />
+        🧗‍♀️
+        </label>
+    <button id="btn" class="pure-button pure-button-primary">Submit</button>
+
+</form>
+<script>
+    const form = document.getElementById("welcome");
+    document.getElementById("btn").addEventListener("click", (event) =>
+    {event.preventDefault();
+    const formObj = {
+        name = form.elements.name.value;
+        lang = form.elements.lang.value;
+        };
+        alert(new URLSearchParams(formObj);
+    });
+</script>
+</body>
+</html>
