@@ -5,7 +5,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-class HibernateUtil {
+public class HibernateUtil {
     private static final SessionFactory sessionFactory = buildSessionFactory();
 
     static void close ()  {
@@ -14,7 +14,7 @@ class HibernateUtil {
         }
     }
 
-    static SessionFactory getSessionFactory(){
+    public static SessionFactory getSessionFactory(){
         return sessionFactory;
     }
 
